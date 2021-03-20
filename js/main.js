@@ -50,7 +50,6 @@ var that = new Vue({
             })
                 .then(function (response) {
                     that.platform = response.data;
-                    console.log(that.platform, 1111);
                     document.querySelectorAll('#youtube')[0].src = that.platform.youtube_url;
                     document.querySelectorAll('#content')[0].innerHTML = that.platform.pc_info_txt;
                 })
