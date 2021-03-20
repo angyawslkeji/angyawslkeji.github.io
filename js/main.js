@@ -18,16 +18,16 @@ new Vue({
         document.getElementsByClassName('companylogo')[0].style.width = sysW*0.28+'px';
         document.getElementsByClassName('img-logo-4')[0].style.height = sysW*0.28+'px'; 
         
-        document.getElementsByClassName('t-right')[0].style.height = sysW*0.30+'px';
+        document.getElementsByClassName('t-right')[0].style.height = sysW*0.28+'px';
         document.getElementsByClassName('t-right')[0].style.width = sysW*0.30+'px';
 
         // iframe小程序
-        document.querySelectorAll('.v-center iframe')[0].style.height = sysW*0.48+'px';
-        document.querySelectorAll('.v-center iframe')[0].style.width = sysW*0.446*992/1995+'px';
+        document.querySelectorAll('.v-center iframe')[0].style.height = sysW*0.448+'px';
+        document.querySelectorAll('.v-center iframe')[0].style.width = sysW*0.43*992/1995+'px';
         
         // 边框图标
-        document.querySelectorAll('.v-center .biankuang')[0].style.height = sysW*0.519+'px';
-        document.querySelectorAll('.v-center .biankuang')[0].style.width = sysW*0.519*992/1995+'px';
+        document.querySelectorAll('.v-center .biankuang')[0].style.height = sysW*0.485+'px';
+        document.querySelectorAll('.v-center .biankuang')[0].style.width = sysW*0.5*992/1995+'px';
         document.querySelectorAll('.v-center')[0].style.marginLeft = sysW*0.055+'px';
         
         document.getElementsByClassName('b-left')[0].style.width = sysW*0.36+'px';
