@@ -65,3 +65,7 @@ var that = new Vue({
 
 
 that.init();
+window.onresize = function(){
+    location.reload();
+
+}
