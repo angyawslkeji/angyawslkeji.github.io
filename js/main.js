@@ -38,8 +38,8 @@ var that = new Vue({
             // document.querySelectorAll('.v-center')[0].style.left = sysW * 0.35 + 'px';
             document.querySelectorAll('.v-center')[0].style.height = document.body.clientHeight + 'px';
 
-            document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.47 + 'px';
-            document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.52 * 992 / 1995 + 'px';
+            // document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.47 + 'px';
+            // document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.52 * 992 / 1995 + 'px';
             // document.querySelectorAll('.v-center iframe')[0].style.marginTop = sysW * 0.016 + 'px';
             // document.querySelectorAll('.v-center iframe')[0].style.marginLeft = sysW * 0.004 + 'px';
             // document.querySelectorAll('.v-center iframe')[0].style.borderRadius = sysW * 0.01 + 'px';
@@ -77,4 +77,24 @@ that.reset();
 window.onresize = function () {
     that.reset();
     document.querySelectorAll('.v-center iframe')[0].src = document.querySelectorAll('.v-center iframe')[0].src;
+}
+
+
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+if (!IsPC()) {
+   location.href='/m/index.html';
 }
