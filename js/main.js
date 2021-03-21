@@ -24,9 +24,9 @@ var that = new Vue({
 
         // iframe小程序
         document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.448 + 'px';
-        document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.43 * 992 / 1995 + 'px';
+        document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.435 * 992 / 1995 + 'px';
         document.querySelectorAll('.v-center iframe')[0].style.marginTop = sysW * 0.018 + 'px';
-        document.querySelectorAll('.v-center iframe')[0].style.marginLeft = sysW * 0.018 + 'px';
+        document.querySelectorAll('.v-center iframe')[0].style.marginLeft = sysW * 0.015 + 'px';
 
         // 边框图标
         document.querySelectorAll('.v-center .biankuang')[0].style.height = sysW * 0.485 + 'px';
