@@ -4,13 +4,13 @@
     /* IE9 */
 }
 
-body{
+body {
     width: 100%;
     overflow-x: hidden;
     padding: 0;
     margin: 0;
 }
- 
+
 .bottom {
     padding: 30px;
     color: white;
@@ -57,36 +57,37 @@ body{
     text-align: center;
 }
 
-.top{
+.top {
     display: flex;
     justify-content: space-between;
     padding: 30px;
-} 
-.bl-title{
+}
+
+.bl-title {
     padding: 10px;
     background: #3b5998;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
-.bl-content{
+
+.bl-content {
     font-weight: bold;
 }
 
-.v-center{
+.v-center {
     position: absolute;
     left: 35%;
 }
 
-.v-center iframe{
+.v-center iframe {
     z-index: 888;
-    overflow-x : hidden;  
-    overflow-y : hidden;   
+    overflow-x: hidden;
+    overflow-y: hidden;
     border: none;
-    margin-left: 32px;
-    margin-top:34px;
+    margin-top: 34px;
     position: absolute;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     top: 0;
 }
 
@@ -94,31 +95,36 @@ body{
     width: 0px;
     display: none;
     height: 0px;
- }
-
- .v-center::-webkit-scrollbar {
-    width: 0px;
-    display: none;
-    height: 0px;
- }
- .biankuang::-webkit-scrollbar {
-    width: 0px;
-    display: none;
-    height: 0px;
- }
-
-.biankuang{
-    background: url(/img/imgbin_iphone-x-iphone-7-ios-12-messages-png.png);
-	background-repeat:no-repeat;
-	background-size:100% 100%;
-	-moz-background-size:100% 100%;
 }
 
-a{ text-decoration:none;
-} 
+.v-center::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+    height: 0px;
+}
 
+.biankuang::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+    height: 0px;
+}
 
-.b-left a{ text-decoration:none;
+.biankuang {
+    background: url(/img/imgbin_iphone-x-iphone-7-ios-12-messages-png.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
 
-    color: white;
-    } 
+a {
+    text-decoration: none;
+}
+
+.b-left a {
+    text-decoration: none;
+     color: white;
+}
+
+.hide{
+    display: none !important;
+}
