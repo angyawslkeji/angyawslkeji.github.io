@@ -43,6 +43,11 @@ body::-webkit-scrollbar {
 }
 
 #main,.b-right{
+         /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+         -ms-overflow-style:none;
+         /*火狐下隐藏滚动条*/
+         overflow:-moz-scrollbars-none;
+
     box-sizing:border-box;
 -moz-box-sizing:border-box; /* Firefox */
 -webkit-box-sizing:border-box; /* Safari */
@@ -61,6 +66,17 @@ body::-webkit-scrollbar {
 
 .t-right {
     overflow-y: scroll;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    scrollbar-width: none;
+         /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+         -ms-overflow-style:none;
+         /*火狐下隐藏滚动条*/
+         overflow:-moz-scrollbars-none;
+}
+
+.t-right::-webkit-scrollbar {
+    display: none;
 }
 
 .t-right::-webkit-scrollbar {
