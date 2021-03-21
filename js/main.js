@@ -15,37 +15,9 @@ var that = new Vue({
         platform: {}
     },
     created: function () {
-        document.getElementsByClassName('companylogo')[0].style.height = sysW * 0.28 + 'px';
-        document.getElementsByClassName('companylogo')[0].style.width = sysW * 0.28 + 'px';
-        document.getElementsByClassName('img-logo-4')[0].style.height = sysW * 0.28 + 'px';
-
-        document.getElementsByClassName('t-right')[0].style.height = sysW * 0.28 + 'px';
-        document.getElementsByClassName('t-right')[0].style.width = sysW * 0.30 + 'px';
-
-        // iframe小程序
-        document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.46 + 'px';
-        document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.52 * 992 / 1995 + 'px';
-        document.querySelectorAll('.v-center iframe')[0].style.marginTop = sysW * 0.018 + 'px';
-        document.querySelectorAll('.v-center iframe')[0].style.marginLeft =sysW * 0.004 + 'px';
-        // document.querySelectorAll('.v-center iframe')[0].style.borderRadius = sysW * 0.01 + 'px';
-
-        // 边框图标
-        document.querySelectorAll('.v-center .biankuang')[0].style.height = sysW * 0.485 + 'px';
-        document.querySelectorAll('.v-center .biankuang')[0].style.width = sysW * 0.5 * 992 / 1995 + 'px';
-        document.querySelectorAll('.v-center')[0].style.marginLeft = sysW * 0.055 + 'px';
-
-        document.getElementsByClassName('b-left')[0].style.width = sysW * 0.36 + 'px';
-        document.querySelectorAll('#youtube')[0].style.height = sysW * 0.17 + 'px';
-        document.querySelectorAll('#youtube')[0].style.width = sysW * 0.17 * 16 / 9 + 'px';
-
-        let imglogo4 = document.querySelectorAll('.img-logo-4 img');
-        for (let i = 0; i < imglogo4.length; i++) {
-            imglogo4[i].style.width = sysW * 0.06 + 'px';
-            imglogo4[i].style.height = sysW * 0.06 + 'px';
-        };
     },
     methods: {
-        init:function(){
+        init: function () {
             axios.post('https://spb2u1.ihogu.com/app/index.php?i=3&t=0&v=2&from=wxapp&c=entry&a=wxapp&do=GetPlatform&&m=zh_zbkq', {
                 'sign': '311b6d0c26c93e5a771f2a06cdf23bbc',
             })
@@ -58,15 +30,47 @@ var that = new Vue({
                     console.log(error);
                 });
         },
-        reverseMessage: function () {
+        reset: function (sysW) {
+            document.getElementsByClassName('companylogo')[0].style.height = sysW * 0.28 + 'px';
+            document.getElementsByClassName('companylogo')[0].style.width = sysW * 0.28 + 'px';
+            document.getElementsByClassName('img-logo-4')[0].style.height = sysW * 0.28 + 'px';
 
+            document.getElementsByClassName('t-right')[0].style.height = sysW * 0.28 + 'px';
+            document.getElementsByClassName('t-right')[0].style.width = sysW * 0.30 + 'px';
+
+            // iframe小程序
+            document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.485 + 'px';
+            document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.52 * 992 / 1995 + 'px';
+            document.querySelectorAll('.v-center iframe')[0].style.marginTop = sysW * 0.01 + 'px';
+            document.querySelectorAll('.v-center iframe')[0].style.marginLeft = sysW * 0.004 + 'px';
+            // document.querySelectorAll('.v-center iframe')[0].style.borderRadius = sysW * 0.01 + 'px';
+
+            // 边框图标
+            document.querySelectorAll('.v-center .biankuang')[0].style.height = sysW * 0.485 + 'px';
+            document.querySelectorAll('.v-center .biankuang')[0].style.width = sysW * 0.5 * 992 / 1995 + 'px';
+            document.querySelectorAll('.v-center')[0].style.marginLeft = sysW * 0.055 + 'px';
+
+            document.getElementsByClassName('b-left')[0].style.width = sysW * 0.36 + 'px';
+            document.querySelectorAll('#youtube')[0].style.height = sysW * 0.17 + 'px';
+            document.querySelectorAll('#youtube')[0].style.width = sysW * 0.17 * 16 / 9 + 'px';
+
+            let imglogo4 = document.querySelectorAll('.img-logo-4 img');
+            for (let i = 0; i < imglogo4.length; i++) {
+                imglogo4[i].style.width = sysW * 0.06 + 'px';
+                imglogo4[i].style.height = sysW * 0.06 + 'px';
+            };
         }
     },
-}); 
+});
 
 
 that.init();
-window.onresize = function(){
+if (sysW > 1024) {
+    that.reset(sysW);
+}else{
+    that.reset(1024);
+}
+window.onresize = function () {
     location.reload();
 
 }
