@@ -10,6 +10,11 @@ body {
     margin: 0;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+    height: 10px;
+}
+
 .bottom {
     padding: 30px;
     color: white;
@@ -76,7 +81,6 @@ body {
 
 .v-center {
     position: absolute;
-    left: 35%;
 }
 
 .v-center iframe {

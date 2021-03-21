@@ -31,6 +31,8 @@ var that = new Vue({
                 });
         },
         reset: function (sysW) {
+            document.querySelectorAll('#main')[0].style.width=sysW+'px'; 
+
             document.getElementsByClassName('companylogo')[0].style.height = sysW * 0.28 + 'px';
             document.getElementsByClassName('companylogo')[0].style.width = sysW * 0.28 + 'px';
             document.getElementsByClassName('img-logo-4')[0].style.height = sysW * 0.28 + 'px';
@@ -39,6 +41,7 @@ var that = new Vue({
             document.getElementsByClassName('t-right')[0].style.width = sysW * 0.30 + 'px';
 
             // iframe小程序
+            document.querySelectorAll('.v-center')[0].style.left = sysW * 0.35 + 'px';
             document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.485 + 'px';
             document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.52 * 992 / 1995 + 'px';
             document.querySelectorAll('.v-center iframe')[0].style.marginTop = sysW * 0.01 + 'px';
@@ -59,6 +62,7 @@ var that = new Vue({
                 imglogo4[i].style.width = sysW * 0.06 + 'px';
                 imglogo4[i].style.height = sysW * 0.06 + 'px';
             };
+
         }
     },
 });
@@ -67,11 +71,6 @@ var that = new Vue({
 that.init();
 if (sysW > 1024) {
     that.reset(sysW);
-}else{
-    document.querySelectorAll('body')[0].style.width = 1024+'px';
+} else {
     that.reset(1024);
-}
-window.onresize = function () {
-    location.reload();
-
 }
