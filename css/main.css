@@ -7,7 +7,10 @@
 body {
     width: 100%;
     padding: 0;
-    margin: 0;
+    background-color: #ff5757;
+    margin: 0;box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
 }
 
 body::-webkit-scrollbar {
@@ -16,11 +19,14 @@ body::-webkit-scrollbar {
 }
 
 .bottom {
-    padding: 30px;
+    padding:0 30px;
     color: white;
     display: flex;
     justify-content: space-between;
     background-color: #ff5757;
+    padding-bottom: 0 !important;box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
 }
 
 .companylogo {
@@ -34,6 +40,12 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: space-around;
     margin: 0 30px;
+}
+
+#main,.b-right{
+    box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
 }
 
 
@@ -62,6 +74,7 @@ body::-webkit-scrollbar {
 }
 
 .top {
+    background: white;
     display: flex;
     justify-content: space-between;
     padding: 30px;
