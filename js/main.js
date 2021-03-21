@@ -68,6 +68,7 @@ that.init();
 if (sysW > 1024) {
     that.reset(sysW);
 }else{
+    document.querySelectorAll('body')[0].style.width = 1024+'px';
     that.reset(1024);
 }
 window.onresize = function () {
