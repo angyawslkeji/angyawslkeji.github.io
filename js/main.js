@@ -77,8 +77,9 @@ that.init();
 that.reset();
 
 window.onresize = function () {
-    that.reset();
-    document.querySelectorAll('.v-center iframe')[0].src = document.querySelectorAll('.v-center iframe')[0].src;
+    location.reload();
+    // that.reset();
+    // document.querySelectorAll('.v-center iframe')[0].src = document.querySelectorAll('.v-center iframe')[0].src;
 }
 
 
