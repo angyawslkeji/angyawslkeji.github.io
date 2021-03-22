@@ -31,9 +31,11 @@ var that = new Vue({
             if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
                 sysW = document.documentElement.clientWidth;
             }
-            console.log(sysW, 1111);
-            // document.querySelectorAll('#main')[0].style.width = sysW + 'px';
 
+            if (sysW <= 1366) {
+                sysW = 1366;
+                document.querySelectorAll('#main')[0].style.width = sysW + 'px';
+            }
             // iframe小程序
             // document.querySelectorAll('.v-center')[0].style.left = sysW * 0.35 + 'px';
             document.querySelectorAll('.v-center')[0].style.height = document.body.clientHeight + 'px';
@@ -96,5 +98,5 @@ function IsPC() {
 }
 
 if (!IsPC()) {
-   location.href='/m/index.html';
+    location.href = '/m/index.html';
 }

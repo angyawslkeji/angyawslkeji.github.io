@@ -14,8 +14,11 @@ body {
     /* Firefox */
     -webkit-box-sizing: border-box;
     /* Safari */
-    overflow: hidden;
-}html,body{
+    overflow-y: hidden;
+}
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -68,6 +71,10 @@ body::-webkit-scrollbar {
     /* Safari */
 }
 
+#main{
+    display: flex;
+    justify-content: center;
+}
 
 .img-logo-4 img {
     width: 100px;
@@ -122,29 +129,38 @@ body::-webkit-scrollbar {
 .bl-content {
     font-weight: 400;
 }
+
 .v-center {
-    width: 100%;
+    width: 33%;
     text-align: center;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 1%;
 }
 
+    
 .v-center iframe {
     z-index: 888;
     overflow-x: hidden;
     overflow-y: hidden;
     border: none;
-    width: 30%;
     height: 100%;
+    width: 100%;
 }
 
-@media (max-width: 767px) {
-    .wppc{
-      display: block !important;
+/* @media (min-width: 1024px) { 
+    .v-center iframe {
+        width: 30%;
     }
-  }
+}
+
+@media (max-width: 1024px) {
+    .v-center iframe {
+        width: 100%;
+    }
+} */
 
 .v-center iframe::-webkit-scrollbar {
     width: 0px;
