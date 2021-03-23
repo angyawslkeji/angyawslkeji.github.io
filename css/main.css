@@ -200,3 +200,8 @@ a {
 .hide {
     display: none !important;
 }
+
+
+.ad-left,.ad-right{
+    margin-top: 2.34%;
+}
