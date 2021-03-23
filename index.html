@@ -6,6 +6,26 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<title>WE-PON.com 早早快购</title>
 	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<script>
+		     let sysW = '';
+            // 获取窗口宽度
+            if (window.innerWidth)
+                sysW = window.innerWidth;
+            else if ((document.body) && (document.body.clientWidth))
+                sysW = document.body.clientWidth;
+            // 通过深入 Document 内部对 body 进行检测，获取窗口大小
+            if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
+                sysW = document.documentElement.clientWidth;
+            }
+
+            if (sysW <= 1366) {
+                sysW = 1366;
+                document.querySelectorAll('#main')[0].style.width = sysW + 'px';
+            }
+            // iframe小程序
+            // document.querySelectorAll('.v-center')[0].style.left = sysW * 0.35 + 'px';
+            document.querySelectorAll('.v-center')[0].style.height = document.body.clientHeight + 'px';
+	</script>
 </head>
 
 <body>
