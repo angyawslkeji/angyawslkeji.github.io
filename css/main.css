@@ -203,5 +203,6 @@ a {
 
 
 .ad-left,.ad-right{
+    display: none;
     margin-top: 2.34%;
 }

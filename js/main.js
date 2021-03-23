@@ -38,7 +38,9 @@ var that = new Vue({
             }
             // iframe小程序
             // document.querySelectorAll('.v-center')[0].style.left = sysW * 0.35 + 'px';
-            document.querySelectorAll('.v-center')[0].style.height = document.body.clientHeight + 'px';
+            if(document.querySelectorAll('.v-center')){
+                document.querySelectorAll('.v-center')[0].style.height = document.body.clientHeight + 'px';
+            }
 
             // document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.47 + 'px';
             // document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.52 * 992 / 1995 + 'px';
@@ -71,7 +73,6 @@ var that = new Vue({
         }
     },
 });
-
 
 that.init();
 that.reset();
