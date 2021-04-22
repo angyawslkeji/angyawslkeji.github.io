@@ -8,17 +8,17 @@ var that = new Vue({
     },
     methods: {
         init: function () {
-            axios.post('https://spb2u1.ihogu.com/app/index.php?i=3&t=0&v=2&from=wxapp&c=entry&a=wxapp&do=GetPlatform&&m=zh_zbkq', {
-                'sign': '311b6d0c26c93e5a771f2a06cdf23bbc',
-            })
-                .then(function (response) {
-                    that.platform = response.data;
-                    document.querySelectorAll('#youtube')[0].src = that.platform.youtube_url;
-                    document.querySelectorAll('#content')[0].innerHTML = that.platform.pc_info_txt;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            // axios.post('https://spb2u1.ihogu.com/app/index.php?i=3&t=0&v=2&from=wxapp&c=entry&a=wxapp&do=GetPlatform&&m=zh_zbkq', {
+            //     'sign': '311b6d0c26c93e5a771f2a06cdf23bbc',
+            // })
+            //     .then(function (response) {
+            //         that.platform = response.data;
+            //         document.querySelectorAll('#youtube')[0].src = that.platform.youtube_url;
+            //         document.querySelectorAll('#content')[0].innerHTML = that.platform.pc_info_txt;
+            //     })
+            //     .catch(function (error) {
+            //         console.log(error);
+            //     });
         },
         reset: function () {
             let sysW = '';
@@ -31,44 +31,50 @@ var that = new Vue({
             if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
                 sysW = document.documentElement.clientWidth;
             }
+            let rbr = document.querySelectorAll('.r-b-r');
+            let img41 = document.querySelectorAll('.img41');
+            let img81 = document.querySelectorAll('.img81');
 
+            let baseW= sysW*0.18;
             if (sysW <= 1366) {
                 sysW = 1366;
-                document.querySelectorAll('#main')[0].style.width = sysW + 'px';
+                baseW= sysW*0.18;
+                document.querySelectorAll('.left')[0].style.display='none';
+                document.querySelectorAll('.right')[0].style.width='100%';
+                let rightDiv = document.querySelectorAll('.right>div');
+                let right2 =document.querySelectorAll('.right2')[0];
+                for(let i=0;i<rightDiv.length;i++){
+                    rightDiv[i].style.width='unset';
+                }
+                right2.style.marginLeft=(baseW*0.66)+'px';
+                // document.querySelectorAll('#main')[0].style.width = sysW + 'px';
             }
+
             // iframe小程序
             // document.querySelectorAll('.v-center')[0].style.left = sysW * 0.35 + 'px';
-            if(document.querySelectorAll('.v-center')){
-                document.querySelectorAll('.v-center')[0].style.height = document.body.clientHeight + 'px';
+            for(let i =0;i<img41.length;i++){
+                img41[i].style.width=baseW+'px';
+                img41[i].style.height=baseW+'px';
+                img41[i].style.marginBottom=baseW*0.15+'px';
+                img41[i].style.marginRight=baseW*0.15+'px';
             }
+            for(let i =0;i<img81.length;i++){
+                img81[i].style.width=baseW*0.4+'px';
+                img81[i].style.height=baseW*0.4+'px';
+                img81[i].style.marginRight=baseW*0.1+'px';
+                // img81[i].style.marginBottom=baseW*0.5+'px';
+            }
+            rbr[0].style.marginLeft='-'+(baseW*0.2)+'px';
+            rbr[0].style.marginTop= '-'+(baseW*0.14)+'px';
 
-            // document.querySelectorAll('.v-center iframe')[0].style.height = sysW * 0.47 + 'px';
-            // document.querySelectorAll('.v-center iframe')[0].style.width = sysW * 0.52 * 992 / 1995 + 'px';
-            // document.querySelectorAll('.v-center iframe')[0].style.marginTop = sysW * 0.016 + 'px';
-            // document.querySelectorAll('.v-center iframe')[0].style.marginLeft = sysW * 0.004 + 'px';
-            // document.querySelectorAll('.v-center iframe')[0].style.borderRadius = sysW * 0.01 + 'px';
+            let rbrT = document.querySelectorAll('.r-b-r-bt');
+            let rbrTCoom = document.querySelectorAll('.r-b-r-bt-common');
+            rbrT[0].style.marginBottom='-'+(baseW*0.25)+'px';
+            // rbrT[0].style.marginTop=(baseW*0.15)+'px'; 
 
-
-            // document.getElementsByClassName('companylogo')[0].style.height = sysW * 0.28 + 'px';
-            // document.getElementsByClassName('companylogo')[0].style.width = sysW * 0.28 + 'px';
-            // document.getElementsByClassName('img-logo-4')[0].style.height = sysW * 0.28 + 'px';
-
-            // document.getElementsByClassName('t-right')[0].style.height = sysW * 0.28 + 'px';
-            // document.getElementsByClassName('t-right')[0].style.width = sysW * 0.30 + 'px';
-            // 边框图标
-            // document.querySelectorAll('.v-center .biankuang')[0].style.height = sysW * 0.485 + 'px';
-            // document.querySelectorAll('.v-center .biankuang')[0].style.width = sysW * 0.5 * 992 / 1995 + 'px';
-            // document.querySelectorAll('.v-center')[0].style.marginLeft = sysW * 0.055 + 'px';
-
-            // document.getElementsByClassName('b-left')[0].style.width = sysW * 0.36 + 'px';
-            // document.querySelectorAll('#youtube')[0].style.height = sysW * 0.17 + 'px';
-            // document.querySelectorAll('#youtube')[0].style.width = sysW * 0.17 * 16 / 9 + 'px';
-
-            // let imglogo4 = document.querySelectorAll('.img-logo-4 img');
-            // for (let i = 0; i < imglogo4.length; i++) {
-            //     imglogo4[i].style.width = sysW * 0.06 + 'px';
-            //     imglogo4[i].style.height = sysW * 0.06 + 'px';
-            // };
+            rbrTCoom[0].style.marginLeft=(baseW*0.01)+'px';
+            rbrTCoom[1].style.marginLeft=(baseW*0.01)+'px';
+            
 
         }
     },
@@ -79,7 +85,7 @@ that.reset();
 
 window.onresize = function () {
     location.reload();
-    // that.reset();
+    that.reset();
     // document.querySelectorAll('.v-center iframe')[0].src = document.querySelectorAll('.v-center iframe')[0].src;
 }
 

@@ -1,0 +1,208 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('./AbrilFatface-Regular.woff.ttf');
+    /* IE9 */
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    background: #ff5757;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    /* Safari */
+    overflow-y: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+    height: 10px;
+}
+
+.bottom {
+    padding: 0 30px;
+    color: white;
+    display: flex;
+    color: #ff5757;
+    justify-content: space-between;
+    padding-bottom: 0 !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    font-size: 22px;
+    -webkit-box-sizing: border-box;
+    /* Safari */
+}
+
+.companylogo {
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.img-logo-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 30px;
+}
+
+#main,
+.b-right {
+    /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+    -ms-overflow-style: none;
+    /*火狐下隐藏滚动条*/
+    overflow: -moz-scrollbars-none;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    /* Safari */
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+}
+
+.img-logo-4 img {
+    width: 100px;
+    height: 100px;
+}
+
+.t-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.t-right {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    scrollbar-width: none;
+    /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+    -ms-overflow-style: none;
+    /*火狐下隐藏滚动条*/
+    overflow: -moz-scrollbars-none;
+}
+
+.t-right::-webkit-scrollbar {
+    display: none;
+}
+
+.t-right::-webkit-scrollbar {
+    display: none;
+}
+
+.t-right .title {
+    font-size: 50px;
+    font-family: myFirstFont;
+    text-align: center;
+}
+
+.top {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.bl-title {
+    padding: 10px;
+    background: #3b5998;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bl-content {
+    font-weight: 400;
+}
+
+.v-center {
+    width: 33%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1%;
+}
+
+    
+.v-center iframe {
+    z-index: 888;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: white;
+}
+
+/* @media (min-width: 1024px) { 
+    .v-center iframe {
+        width: 30%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .v-center iframe {
+        width: 100%;
+    }
+} */
+
+.v-center iframe::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+    height: 0px;
+}
+
+.v-center::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+    height: 0px;
+}
+
+.biankuang::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+    height: 0px;
+}
+
+.biankuang {
+    background: url(/img/imgbin_iphone-x-iphone-7-ios-12-messages-png.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.b-left a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+.ad-left,.ad-right{
+    display: none;
+    margin-top: 2.34%;
+}
