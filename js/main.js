@@ -21,12 +21,17 @@ var that = new Vue({
             //     });
         },
         reset: function () {
-            let sysW = '';
+            let sysW = '',sysH;
             // 获取窗口宽度
-            if (window.innerWidth)
+            if (window.innerWidth){
                 sysW = window.innerWidth;
+                sysH = window.innerHeight;
+            }
             else if ((document.body) && (document.body.clientWidth))
+            {
+                sysH =document.body.clientHeight;
                 sysW = document.body.clientWidth;
+            }
             // 通过深入 Document 内部对 body 进行检测，获取窗口大小
             if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
                 sysW = document.documentElement.clientWidth;
@@ -36,7 +41,7 @@ var that = new Vue({
             let img81 = document.querySelectorAll('.img81');
 
             let baseW= sysW*0.18;
-            if (sysW <= 1366) {
+            if (sysW <= 1366 ||sysH<669) {
                 sysW = 1366;
                 baseW= sysW*0.18;
                 document.querySelectorAll('.left')[0].style.display='none';
